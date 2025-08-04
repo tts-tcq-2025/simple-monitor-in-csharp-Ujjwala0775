@@ -8,10 +8,12 @@ class Checker
         if(temperature < 0 || temperature > 45) {
             Console.WriteLine("Temperature is out of range!");
             return false;
-        } else if(soc < 20 || soc > 80) {
+        } 
+        if(soc < 20 || soc > 80) {
             Console.WriteLine("State of Charge is out of range!");
             return false;
-        } else if(chargeRate > 0.8) {
+        } 
+        if(chargeRate > 0.8) {
             Console.WriteLine("Charge Rate is out of range!");
             return false;
         }
@@ -34,8 +36,7 @@ class Checker
         ExpectTrue(batteryIsOk(25, 70, 0.7f));
         ExpectFalse(batteryIsOk(50, 85, 0.0f));
         Console.WriteLine("All ok");
-        return 0;
-    }
+      
+}
     
-}
-}
+
